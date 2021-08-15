@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
+import "./style.scss";
 
 const cookies = new Cookies();
 
@@ -101,6 +102,9 @@ export default class App extends React.Component {
             </label>
             <input type="submit" value="Submit" />
           </form>
+        </div>
+        <div class="footer">
+          <p><a href="https://coffee-be.gspncr.com">Check backend</a> &nbsp; Check source code (<a href="https://github.com/gspncr/coffee-lock-frontend">frontend</a> / <a href="https://github.com/gspncr/coffee-lock-backend">backend</a>)</p>
         </div>
       </div>
     )
