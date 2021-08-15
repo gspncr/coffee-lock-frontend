@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+`npm run build && aws s3 sync build/ s3://coffee.gspncr.com`
+
+stop annoyingly opening browser with `BROWSER=none yarn start`
+
 ## Available Scripts
 
 In the project directory, you can run:
