@@ -83,22 +83,22 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app">
-      <h1>Coffee Lock Frontend</h1>
+      <div className="header"><h1>Coffee Lock Frontend</h1></div>
         <div className="stats">
           <h2>time to coffee: {this.state.data.countdownToCoffee}</h2>
           <h3>next redemption available at: {this.state.data.timeOfUnlock}</h3>
           <h4>coffees consumed today: {this.state.data.coffeesRedeemedToday}</h4>
           <h4>^ correct as of: {this.state.data.asOf}</h4>
+          <i>if the date is not today, great news, no coffees redeemed today!</i>
           <h3>Logged in as: {this.state.name}</h3>
           <h4>last locked by: {this.state.data.lastLockedBy}</h4>
-          <i>if the date is not today, great news, no coffees redeemed today!</i>
         </div>
         <div className="ordering">
           <button onClick={this.handleButton(this.state.name)}>Grab a coffee</button>
           <h3>Coffee request is: {this.state.coffeeOrdered.lockRequest} {this.state.coffeeOrdered.explanation}</h3>
           <form onSubmit={this.handleSubmit}>
             <label>
-              Set or change name: <input type="text" value={this.state.name} onChange={this.handleChange} placeholder={this.state.name} />
+              Set/change name: <input type="text" value={this.state.name} onChange={this.handleChange} placeholder={this.state.name} />
             </label>
             <input type="submit" value="Submit" />
           </form>
